@@ -12,10 +12,12 @@ var DB *gorm.DB
 
 func ConnectDatabase() {
 	var err error
-	dsn := os.Getenv("DB_STRING")
+	dsn := os.Getenv("DNS")
 	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
 		log.Fatal("Cant connect to database")
 	}
+
+	log.Println("Success to connect")
 }
