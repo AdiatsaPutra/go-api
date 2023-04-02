@@ -1,15 +1,15 @@
 package main
 
 import (
-	// "go-gin/configs"
+	"go-gin/configs"
 
 	"github.com/gin-gonic/gin"
 )
 
-// func init() {
-// 	configs.LoadEnvVariables()
-// 	configs.ConnectDatabase()
-// }
+func init() {
+	// configs.LoadEnvVariables()
+	configs.ConnectDatabase()
+}
 
 func main() {
 
